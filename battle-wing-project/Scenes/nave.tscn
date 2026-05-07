@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://wy1arf6lndcc"]
+
+[ext_resource type="Script" uid="uid://bp2pne1nkwndv" path="res://Scripts/nave.gd" id="1_pkxkw"]
+[ext_resource type="Texture2D" uid="uid://cmxuddisxfmwj" path="res://icon.svg" id="2_8d7b3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1inpp"]
+
+[node name="Nave" type="CharacterBody2D" unique_id=1596515066]
+script = ExtResource("1_pkxkw")
+velocidad_maxima = 350
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1186852369]
+texture = ExtResource("2_8d7b3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=993222337]
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_1inpp")
