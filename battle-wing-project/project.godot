@@ -15,6 +15,11 @@ run/main_scene="uid://dkcj4m27yms7c"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1600
+window/size/viewport_height=900
+
 [input]
 
 Acelerar={

@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var vel_rotacion = 50
 @export var velocidad_maxima = 400
 
+@onready var tamano_pantalla = get_viewport_rect().size
 
 func Aceleracion():
 	var input_vector := Vector2(0, Input.get_action_strength("Acelerar"))
@@ -23,7 +24,13 @@ func Rotacion(delta):
 		rotate(-deg_to_rad(velocidad_maxima*delta))
 	pass
 
+func screen_wrap():
+	position.x = wrapf(position.x, 0, tamano_pantalla.x)
+	position.y = wrapf(position.y, 0, tamano_pantalla.y)
+	pass
+
 func _physics_process(delta: float) -> void:
 	Aceleracion()
 	Rotacion(delta)
+	screen_wrap()
 	move_and_slide()
