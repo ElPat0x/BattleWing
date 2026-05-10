@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://dkcj4m27yms7c"]
-
-[ext_resource type="PackedScene" uid="uid://wy1arf6lndcc" path="res://Scenes/nave.tscn" id="1_iti4p"]
-
-[node name="Test_Level" type="Node2D" unique_id=1718556679]
-
-[node name="Nave" parent="." unique_id=1596515066 instance=ExtResource("1_iti4p")]
-position = Vector2(554, 327)
-scale = Vector2(0.5, 0.5)

@@ -1,9 +1,12 @@
 extends CharacterBody2D
 
 @export var aceleracion = 7.5
-@export var vel_rotacion = 50
+@export var vel_rotacion = 150
 @export var velocidad_maxima = 400
+@export var vida = 6
 
+
+@onready var bala = preload("res://Scenes/Objetos/bala.tscn")
 @onready var tamano_pantalla = get_viewport_rect().size
 
 func Aceleracion():
@@ -19,9 +22,9 @@ func Aceleracion():
 
 func Rotacion(delta):
 	if Input.is_action_pressed("Girar_Derecha"):
-		rotate(deg_to_rad(velocidad_maxima*delta))
+		rotate(deg_to_rad(vel_rotacion*delta))
 	if Input.is_action_pressed("Girar_Izquierda"):
-		rotate(-deg_to_rad(velocidad_maxima*delta))
+		rotate(-deg_to_rad(vel_rotacion*delta))
 	pass
 
 func screen_wrap():
@@ -32,5 +35,15 @@ func screen_wrap():
 func _physics_process(delta: float) -> void:
 	Aceleracion()
 	Rotacion(delta)
+	disparar()
 	screen_wrap()
 	move_and_slide()
+
+
+func disparar():
+	
+	if Input.is_action_just_pressed("Disparar"):
+		var spawnear_bala = bala.instantiate()
+		get_tree().root.add_child(spawnear_bala)
+		spawnear_bala.global_position = global_position
+		spawnear_bala.rotation = rotation
