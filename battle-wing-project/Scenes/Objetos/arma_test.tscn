@@ -3,6 +3,21 @@
 [ext_resource type="Texture2D" uid="uid://cmxuddisxfmwj" path="res://icon.svg" id="2_qm4qk"]
 
 [sub_resource type="GDScript" id="GDScript_n4svj"]
+script/source = "extends Node2D
+
+@onready var bala = preload(\"res://Scenes/Objetos/bala.tscn\")
+
+func _process(delta: float) -> void:
+	disparar()
+
+func disparar():
+	
+	if Input.is_action_just_pressed(\"Disparar\"):
+		var spawnear_bala = bala.instantiate()
+		get_tree().root.add_child(spawnear_bala)
+		spawnear_bala.global_position = global_position
+		spawnear_bala.rotation = rotation
+"
 
 [node name="Arma" type="Node2D" unique_id=585348604]
 script = SubResource("GDScript_n4svj")

@@ -3,16 +3,18 @@
 [ext_resource type="Script" uid="uid://cnttciwe546tj" path="res://Scripts/bala.gd" id="1_bsw5t"]
 [ext_resource type="Texture2D" uid="uid://ddoi7nchu8so0" path="res://Resources/bala.png" id="2_1i00s"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_melus"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_bsw5t"]
 
-[node name="Bala" type="Area2D" unique_id=2060256663]
+[node name="Bala" type="Area2D" unique_id=1744568399]
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("1_bsw5t")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1573267873]
 texture = ExtResource("2_1i00s")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1609088636]
-shape = SubResource("CircleShape2D_melus")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1032137076]
+shape = SubResource("CircleShape2D_bsw5t")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1036085268]
 position = Vector2(-6, -6)

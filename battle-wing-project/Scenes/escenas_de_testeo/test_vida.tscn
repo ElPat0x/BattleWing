@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bj3xe60cqqcrc"]
+
+[ext_resource type="PackedScene" uid="uid://wy1arf6lndcc" path="res://Scenes/Objetos/nave.tscn" id="1_18i8v"]
+[ext_resource type="PackedScene" uid="uid://3gtussgshinu" path="res://Scenes/Objetos/arma_test.tscn" id="2_t1bvc"]
+
+[node name="TestVida" type="Node2D" unique_id=2135750326]
+
+[node name="Nave" parent="." unique_id=1596515066 instance=ExtResource("1_18i8v")]
+position = Vector2(308, 474)
+
+[node name="Arma" parent="." unique_id=585348604 instance=ExtResource("2_t1bvc")]
+position = Vector2(309, 137)
