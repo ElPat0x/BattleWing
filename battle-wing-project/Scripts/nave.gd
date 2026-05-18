@@ -54,14 +54,14 @@ func recibir_danio() -> void:
 	vida -= 1
 	print("daño recibido")
 	print(vida)
-	if vida < 0:
+	if vida <= 0:
 		queue_free()
 		print("borrando")
 
 
 
 func _on_hurtbox_area_entered(area: Area2D) -> void:
-	if area.name == "Bala":
+	if area.is_in_group("Bala"):
 		print("He detectado una bala")
 		recibir_danio()
 	pass # Replace with function body.

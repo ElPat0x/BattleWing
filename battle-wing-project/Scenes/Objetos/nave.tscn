@@ -21,14 +21,13 @@ texture = ExtResource("2_8d7b3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=993222337]
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_1inpp")
-disabled = true
 
 [node name="canion" type="Node2D" parent="." unique_id=177766570]
 position = Vector2(0, 62)
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=1696700558]
-collision_layer = 2
-collision_mask = 0
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=968677]
 position = Vector2(0, -0.5)
