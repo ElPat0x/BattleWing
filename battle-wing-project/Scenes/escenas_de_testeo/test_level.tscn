@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://dkcj4m27yms7c"]
 
 [ext_resource type="PackedScene" uid="uid://wy1arf6lndcc" path="res://Scenes/Objetos/nave.tscn" id="1_w5wgp"]
+[ext_resource type="PackedScene" uid="uid://duhkieq0vdu8a" path="res://Scenes/Objetos/nave_j2.tscn" id="2_3kly1"]
 
 [node name="Test_Level" type="Node2D" unique_id=1718556679]
 
 [node name="Nave" parent="." unique_id=1596515066 instance=ExtResource("1_w5wgp")]
-position = Vector2(774, 467)
+position = Vector2(207, 366)
+scale = Vector2(0.5, 0.5)
+
+[node name="Nave_J2" parent="." unique_id=1326827555 instance=ExtResource("2_3kly1")]
+position = Vector2(970, 373)
 scale = Vector2(0.5, 0.5)

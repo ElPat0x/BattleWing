@@ -10,7 +10,7 @@ extends CharacterBody2D
 @onready var canion = $canion
 
 func Aceleracion():
-	var input_vector := Vector2(0, Input.get_action_strength("Acelerar"))
+	var input_vector := Vector2(0, Input.get_action_strength("Acelerar_J2"))
 	velocity += input_vector.rotated(rotation) * aceleracion
 	
 	if input_vector.y == 0:
@@ -21,15 +21,15 @@ func Aceleracion():
 	pass
 
 func Rotacion(delta):
-	if Input.is_action_pressed("Girar_Derecha"):
+	if Input.is_action_pressed("Girar_Derecha_J2"):
 		rotate(deg_to_rad(vel_rotacion*delta))
-	if Input.is_action_pressed("Girar_Izquierda"):
+	if Input.is_action_pressed("Girar_Izquierda_J2"):
 		rotate(-deg_to_rad(vel_rotacion*delta))
 	pass
 
 func disparar():
 	
-	if Input.is_action_just_pressed("Disparar"):
+	if Input.is_action_just_pressed("Disparar_J2"):
 		var spawnear_bala = bala.instantiate()
 		get_tree().root.add_child(spawnear_bala)
 		spawnear_bala.global_position = canion.global_position

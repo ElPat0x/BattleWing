@@ -1,25 +1,25 @@
-[gd_scene format=3 uid="uid://wy1arf6lndcc"]
+[gd_scene format=3 uid="uid://duhkieq0vdu8a"]
 
-[ext_resource type="Script" uid="uid://bp2pne1nkwndv" path="res://Scripts/nave.gd" id="1_pkxkw"]
-[ext_resource type="Texture2D" uid="uid://cmxuddisxfmwj" path="res://icon.svg" id="2_8d7b3"]
+[ext_resource type="Script" uid="uid://bqureekxsj0yh" path="res://Scripts/nave_j_2.gd" id="1_rykar"]
+[ext_resource type="Texture2D" uid="uid://cmxuddisxfmwj" path="res://icon.svg" id="2_yroua"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1inpp"]
-size = Vector2(62, 62)
+size = Vector2(62.5, 62.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqamf"]
-size = Vector2(83.74999, 97.499985)
+size = Vector2(82.5, 96.25)
 
-[node name="Nave" type="CharacterBody2D" unique_id=1596515066 groups=["jugador"]]
+[node name="Nave_J2" type="CharacterBody2D" unique_id=1596515066 groups=["jugador"]]
+modulate = Color(1, 0.27999997, 0.27999997, 1)
 collision_layer = 4
 collision_mask = 4
-script = ExtResource("1_pkxkw")
-velocidad_maxima = 350
+script = ExtResource("1_rykar")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1186852369]
-texture = ExtResource("2_8d7b3")
+texture = ExtResource("2_yroua")
 
 [node name="Collision_box" type="CollisionShape2D" parent="." unique_id=993222337]
-position = Vector2(-1.9073486e-06, -1.9073486e-06)
+position = Vector2(0.4999981, -0.5000019)
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_1inpp")
 
@@ -31,9 +31,9 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="Hurtbox_box" type="CollisionShape2D" parent="Hurtbox" unique_id=968677]
-position = Vector2(-0.49999857, 4.7683716e-07)
+position = Vector2(0, 1.4999982)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_aqamf")
-debug_color = Color(0.95, 0, 0.015833091, 0.41960785)
+debug_color = Color(0.97, 0, 0.01616642, 0.41960785)
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]

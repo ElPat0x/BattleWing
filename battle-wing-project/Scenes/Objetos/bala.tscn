@@ -20,4 +20,5 @@ shape = SubResource("CircleShape2D_bsw5t")
 position = Vector2(-6, -6)
 rect = Rect2(3, 3, 6, 6)
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="borrar_bala"]

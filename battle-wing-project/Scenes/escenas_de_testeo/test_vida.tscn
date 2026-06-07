@@ -2,11 +2,20 @@
 
 [ext_resource type="PackedScene" uid="uid://wy1arf6lndcc" path="res://Scenes/Objetos/nave.tscn" id="1_18i8v"]
 [ext_resource type="PackedScene" uid="uid://3gtussgshinu" path="res://Scenes/Objetos/arma_test.tscn" id="2_t1bvc"]
+[ext_resource type="PackedScene" uid="uid://duhkieq0vdu8a" path="res://Scenes/Objetos/nave_j2.tscn" id="3_hx8k6"]
+[ext_resource type="Script" uid="uid://bqureekxsj0yh" path="res://Scripts/nave_j_2.gd" id="4_1asr5"]
 
 [node name="TestVida" type="Node2D" unique_id=2135750326]
 
 [node name="Nave" parent="." unique_id=1596515066 instance=ExtResource("1_18i8v")]
-position = Vector2(308, 474)
+position = Vector2(542, 474)
+scale = Vector2(0.6, 0.6)
 
 [node name="Arma" parent="." unique_id=585348604 instance=ExtResource("2_t1bvc")]
 position = Vector2(309, 137)
+
+[node name="Nave_J2" parent="." unique_id=517572100 instance=ExtResource("3_hx8k6")]
+position = Vector2(988, 477)
+scale = Vector2(0.6, 0.6)
+script = ExtResource("4_1asr5")
+velocidad_maxima = 400
