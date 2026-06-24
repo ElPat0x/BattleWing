@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://duhkieq0vdu8a"]
 
 [ext_resource type="Script" uid="uid://bqureekxsj0yh" path="res://Scripts/nave_j_2.gd" id="1_rykar"]
-[ext_resource type="Texture2D" uid="uid://cmxuddisxfmwj" path="res://icon.svg" id="2_yroua"]
+[ext_resource type="Texture2D" uid="uid://bc1wvvqvc7dhy" path="res://Resources/Nave_J2.png" id="2_rykar"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1inpp"]
-size = Vector2(62.5, 62.5)
+size = Vector2(12, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqamf"]
-size = Vector2(82.5, 96.25)
+size = Vector2(10, 34.999996)
 
 [node name="Nave_J2" type="CharacterBody2D" unique_id=1596515066 groups=["jugador"]]
 modulate = Color(1, 0.27999997, 0.27999997, 1)
@@ -16,22 +16,26 @@ collision_mask = 4
 script = ExtResource("1_rykar")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1186852369]
-texture = ExtResource("2_yroua")
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+rotation = 3.1415927
+scale = Vector2(1.0095156, 1.0035709)
+texture = ExtResource("2_rykar")
 
 [node name="Collision_box" type="CollisionShape2D" parent="." unique_id=993222337]
-position = Vector2(0.4999981, -0.5000019)
+position = Vector2(0, 6)
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_1inpp")
+debug_color = Color(0, 2.0943518, 2.5032542, 0.41960785)
 
 [node name="canion" type="Node2D" parent="." unique_id=177766570]
-position = Vector2(0, 80)
+position = Vector2(0, 45)
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=1696700558]
 collision_layer = 0
 collision_mask = 2
 
 [node name="Hurtbox_box" type="CollisionShape2D" parent="Hurtbox" unique_id=968677]
-position = Vector2(0, 1.4999982)
+position = Vector2(-1.9073487e-07, 2.9999995)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_aqamf")
 debug_color = Color(0.97, 0, 0.01616642, 0.41960785)

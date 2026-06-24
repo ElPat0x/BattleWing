@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://oq7g383xuerc"]
+
+[ext_resource type="Script" uid="uid://bpirkfu5qyr75" path="res://Scripts/barra_de_vida.gd" id="1_shky2"]
+
+[node name="ProgressBar" type="ProgressBar" unique_id=1722333330]
+offset_right = 193.0
+offset_bottom = 87.0
+script = ExtResource("1_shky2")

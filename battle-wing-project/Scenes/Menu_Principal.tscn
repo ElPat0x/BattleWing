@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://cqneyp7mpy8ad"]
+
+[ext_resource type="Texture2D" uid="uid://2sqv3qrye0lw" path="res://Resources/Logo.png" id="1_bh5t2"]
+[ext_resource type="Script" uid="uid://dss3d8b1t41u8" path="res://Scripts/menu_principal.gd" id="1_sryba"]
+
+[node name="MenuPrincipal" type="Control" unique_id=1786949068]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sryba")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=651787868]
+layout_mode = 0
+offset_left = 467.0
+offset_top = 63.0
+offset_right = 1250.0
+offset_bottom = 474.0
+texture = ExtResource("1_bh5t2")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Iniciar" type="Button" parent="." unique_id=1091416552]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 221.0
+offset_right = 356.0
+offset_bottom = 300.0
+text = "Iniciar Juego"
+
+[node name="Opciones" type="Button" parent="." unique_id=1794537387]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 324.0
+offset_right = 357.0
+offset_bottom = 403.0
+text = "Opciones"
+
+[node name="Salir" type="Button" parent="." unique_id=1057270308]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 428.0
+offset_right = 356.0
+offset_bottom = 507.0
+text = "Salir
+"
+
+[connection signal="pressed" from="Iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]

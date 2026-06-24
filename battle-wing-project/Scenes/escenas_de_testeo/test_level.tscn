@@ -2,13 +2,68 @@
 
 [ext_resource type="PackedScene" uid="uid://wy1arf6lndcc" path="res://Scenes/Objetos/nave.tscn" id="1_w5wgp"]
 [ext_resource type="PackedScene" uid="uid://duhkieq0vdu8a" path="res://Scenes/Objetos/nave_j2.tscn" id="2_3kly1"]
+[ext_resource type="PackedScene" uid="uid://oq7g383xuerc" path="res://Scenes/Objetos/barra_de_vida.tscn" id="3_wsftj"]
+[ext_resource type="Script" uid="uid://ccwhbhrorhow" path="res://Scripts/Manager_estado.gd" id="4_qwt38"]
+[ext_resource type="Texture2D" uid="uid://gtn3mv8wbl7k" path="res://Resources/background.png" id="5_d7xpx"]
+[ext_resource type="Script" uid="uid://bsu1i8f4xrmt7" path="res://Scripts/camera_2d.gd" id="6_0du8i"]
 
 [node name="Test_Level" type="Node2D" unique_id=1718556679]
 
 [node name="Nave" parent="." unique_id=1596515066 instance=ExtResource("1_w5wgp")]
 position = Vector2(207, 366)
-scale = Vector2(0.5, 0.5)
+rotation = 3.1415927
 
 [node name="Nave_J2" parent="." unique_id=1326827555 instance=ExtResource("2_3kly1")]
 position = Vector2(970, 373)
-scale = Vector2(0.5, 0.5)
+rotation = 3.1415927
+
+[node name="manager_estado_del_juego" type="Node" parent="." unique_id=1944912805 node_paths=PackedStringArray("jugador1", "jugador2", "label_score_j1", "label_score_j2", "camera")]
+script = ExtResource("4_qwt38")
+jugador1 = NodePath("../Nave")
+jugador2 = NodePath("../Nave_J2")
+label_score_j1 = NodePath("../Camera2D/Score_Jugador_1")
+label_score_j2 = NodePath("../Camera2D/Score_Jugador_2")
+camera = NodePath("../Camera2D")
+metadata/_custom_type_script = "uid://ccwhbhrorhow"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2081030045]
+z_index = -4
+offset_left = -48.000008
+offset_top = -41.0
+offset_right = 1991.667
+offset_bottom = 1143.0194
+scale = Vector2(0.6667756, 0.6672188)
+texture = ExtResource("5_d7xpx")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1816162269]
+position = Vector2(640, 360)
+limit_enabled = false
+script = ExtResource("6_0du8i")
+
+[node name="ProgressBar" parent="Camera2D" unique_id=1722333330 node_paths=PackedStringArray("jugador") instance=ExtResource("3_wsftj")]
+offset_left = -629.0
+offset_top = -310.0
+offset_right = -436.0
+offset_bottom = -270.0
+jugador = NodePath("../../Nave")
+
+[node name="ProgressBar2" parent="Camera2D" unique_id=1081403733 node_paths=PackedStringArray("jugador") instance=ExtResource("3_wsftj")]
+offset_left = 440.0
+offset_top = -309.0
+offset_right = 633.0
+offset_bottom = -270.0
+jugador = NodePath("../../Nave_J2")
+
+[node name="Score_Jugador_1" type="Label" parent="Camera2D" unique_id=1908146090]
+offset_left = -625.0
+offset_top = -343.0
+offset_right = -534.0
+offset_bottom = -314.0
+text = "Jugador 1: 0"
+
+[node name="Score_Jugador_2" type="Label" parent="Camera2D" unique_id=208404308]
+offset_left = 533.0
+offset_top = -343.0
+offset_right = 624.0
+offset_bottom = -315.0
+text = "Jugador 2: 0"

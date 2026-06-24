@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cbtu3vqw7cwj3"]
+
+[ext_resource type="Script" uid="uid://fxkxm8kxgvqm" path="res://Scripts/placeholder_scoreboard.gd" id="1_b6es6"]
+
+[node name="Placeholder_scoreboard" type="Node2D" unique_id=64407915 node_paths=PackedStringArray("texto_victoria")]
+script = ExtResource("1_b6es6")
+texto_victoria = NodePath("Texto_ganador")
+
+[node name="Texto Resultado" type="Label" parent="." unique_id=493863697]
+offset_left = 402.0
+offset_top = -2.0
+offset_right = 874.0
+offset_bottom = 252.0
+theme_override_font_sizes/font_size = 32
+text = "Pantalla de resultados"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Otro texto mas" type="Label" parent="." unique_id=57996310]
+offset_left = 466.0
+offset_top = 338.0
+offset_right = 796.0
+offset_bottom = 361.0
+text = "Volviendo al menu principal en 5 segundos"
+
+[node name="Texto_ganador" type="Label" parent="." unique_id=1863840057]
+offset_left = 269.0
+offset_top = 213.0
+offset_right = 994.0
+offset_bottom = 286.0
+theme_override_font_sizes/font_size = 25
+text = "El ganador es tal tal tal"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -11,9 +11,15 @@ config_version=5
 [application]
 
 config/name="Battle_Wing_Project"
-run/main_scene="uid://dkcj4m27yms7c"
+run/main_scene="uid://cqneyp7mpy8ad"
 config/features=PackedStringArray("4.6", "Forward Plus")
+boot_splash/image="uid://cxrkb23aipxux"
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=3000
+
+[autoload]
+
+Scoreboard="*uid://wf3pjwrd6qay"
 
 [display]
 

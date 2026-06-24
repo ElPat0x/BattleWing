@@ -6,8 +6,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_bsw5t"]
 
 [node name="Bala" type="Area2D" unique_id=1744568399 groups=["Bala"]]
+z_index = -1
 collision_layer = 2
-collision_mask = 0
+collision_mask = 4
 script = ExtResource("1_bsw5t")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1573267873]
@@ -20,5 +21,5 @@ shape = SubResource("CircleShape2D_bsw5t")
 position = Vector2(-6, -6)
 rect = Rect2(3, 3, 6, 6)
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="borrar_bala"]
